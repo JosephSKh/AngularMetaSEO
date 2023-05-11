@@ -9,4 +9,11 @@
     <a [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</a>
   </li>
 </ul>
+
+<ul>
+  <li *ngFor="let product of products">
+    <a [routerLink]="['/products/'+product.id]" routerLinkActive="router-link-active" >{{product.title}}</a>
+  </li>
+</ul>
+
 <router-outlet></router-outlet>
